@@ -11,7 +11,7 @@ class Game < Board
 
     @players = []
 
-    #va créer nos deux joueurs et les mettre dans un array
+    #met les 2 joueurs dans un array pour acceder aux valeurs
     @current_player = Player.new(player1, "O")
     @players << @current_player
     @current_player = Player.new(player2, "X")
@@ -32,7 +32,7 @@ class Game < Board
 
       #tour du joueur 1
       puts "      A toi de jouer  #{players[0].name}"
-      board.play_turn("01")
+      board.play_turn("01") # qui correspond à X
       board.board_display
 
       
@@ -53,7 +53,7 @@ class Game < Board
 
       #tour joueur 2
       puts "      A toi de jouer #{players[1].name}"
-      board.play_turn("02")
+      board.play_turn("02") #qui correspond à O
       board.board_display
 
       

@@ -5,7 +5,7 @@ class Player
   def initialize(name, symbol)
   
     @name = name 
-    @symbol = symbol
+    @symbol = symbol # initialize un player avec un nom et son symbol
     
   end
 

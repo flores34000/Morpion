@@ -8,7 +8,7 @@ class Board
   def initialize
     @array_case = []
 
-    #rajoute toute les cases dans le tableau 
+    #rajoute les nouvelles cases crées dans le tableau 
     @array_case << BoardCase.new("A1")
     @array_case << BoardCase.new("A2")
     @array_case << BoardCase.new("A3")
@@ -43,7 +43,7 @@ class Board
   #méthode pour un tour de joueur
   def play_turn(player)
 
-    #changer la valeur de la case en X ou O en fonction du joueur
+    #changer la valeur de la case en X ou O en fonction du joueur (definie dans game.turn)
     player == "01" ? a = "X" : a = "O"
      
 
@@ -51,10 +51,11 @@ class Board
     puts "      Choisi ta case"
     print "      > "
     input = gets.chomp
+
     loop do
       case input
 
-      #
+     
 
       when "A1"
         # si la case n'est pas vide choisi une autre case
@@ -175,7 +176,7 @@ class Board
       return "X"
     elsif array_case[2].value == array_case[4].value && array_case[4].value == array_case[6].value && array_case[6].value == "X"
       return "X"
-# si c'est le joueur avec "O"
+# si joueur avec "O"
    
     elsif array_case[0].value == array_case[1].value && array_case[1].value == array_case[2].value && array_case[2].value == "O"
       return "O"
@@ -194,7 +195,7 @@ class Board
     elsif array_case[2].value == array_case[4].value && array_case[4].value == array_case[6].value && array_case[6].value == "O"
       return "O"
 
-    #si tout est rempli
+    #si toutes les cases du jeu sont pleines
     elsif array_case[0].value != " " && array_case[1].value != " " && array_case[2].value != " " && array_case[3].value != " " && array_case[4].value != " " && array_case[5].value != " " && array_case[6].value != " " &&array_case[7].value != " " && array_case[8].value != " "
       return "égalité"
 

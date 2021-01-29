@@ -15,31 +15,31 @@ class Application
     puts ""
   end
 
-  #demande au joueur 1 son nom
+  # demande nom du joueur et lui attribut son symbol
   def ask_player1
     puts "        Entré votre nom "
     print "        JOUEUR 1 : "
     player1 = gets.chomp
     puts " "
-    puts "      Tu joueras avec X"
+    puts "     #{player1} Tu joueras avec X"
     puts " "
     return player1
   end
 
-  #demande au joueur 2 son nom
+
   def ask_player2
     puts "       Entré votre nom "
     print "       JOUEUR 2 : "
     player2 = gets.chomp
     puts " "
-    puts "      Tu joueras avec O"
+    puts "      #{player2} Tu joueras avec O"
     puts " "
     puts " "
     puts "      Appuie sur entrée si tu veux commencer"
     gets.chomp
     return player2
   end
-
+# le joueur 2 lance la partie
  
 
   
