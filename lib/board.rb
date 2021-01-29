@@ -1,6 +1,3 @@
-require_relative 'boardcase'
-require_relative 'player'
-require 'pry'
 
 class Board
   attr_accessor :array_case

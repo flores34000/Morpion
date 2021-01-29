@@ -1,4 +1,4 @@
-require 'pry'
+
 class BoardCase
   attr_accessor :value, :id
     
